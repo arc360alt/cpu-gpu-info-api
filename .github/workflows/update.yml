@@ -1,4 +1,4 @@
-name: weekly fetch and parse GPU info to API
+name: weekly fetch and parse GPU and CPU info to API
 
 on:
   workflow_dispatch:
@@ -25,19 +25,24 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Update data
+      - name: Update GPU data
         run: |
           python update.py
+
+      - name: Update CPU data
+        run: |
+          python cpu_update.py
 
       - name: Validate output
         run: |
           python validators.py gpu.json
+          python validators.py cpu.json
 
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gpu-info-logs
+          name: gpu-cpu-info-logs
           path: '*.log'
           retention-days: 7
 
@@ -50,7 +55,7 @@ jobs:
           if [ -z "$(git status --porcelain)" ]; then
              echo "push=false" >> $GITHUB_OUTPUT
           else
-             git commit -m "Update GPU data - $(date +'%Y-%m-%d')" -a
+             git commit -m "Update GPU and CPU data - $(date +'%Y-%m-%d')" -a
              echo "push=true" >> $GITHUB_OUTPUT
           fi
         shell: bash

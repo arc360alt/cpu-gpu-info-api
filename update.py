@@ -153,10 +153,25 @@ def normalize_columns(cols) -> List[str]:
         List of cleaned column names
     """
     if isinstance(cols, pd.MultiIndex):
-        flat = [
-            " ".join(str(x).strip() for x in tup if str(x) != "nan" and not str(x).startswith("Unnamed"))
-            for tup in cols.values
-        ]
+        flat = []
+        for tup in cols.values:
+            # Collapse consecutive repeated header levels (from a cell
+            # spanning multiple header rows). pandas only disambiguates
+            # colliding levels by suffixing the LAST repeat with ".N", so
+            # compare levels with that suffix stripped and, when a level
+            # differs only by such a suffix, keep the suffixed form - it's
+            # the one distinguishing this column from its sibling.
+            levels: List[str] = []
+            for x in tup:
+                xs = str(x).strip()
+                if xs == "nan" or xs.startswith("Unnamed"):
+                    continue
+                base = re.sub(r"\.\d+$", "", xs)
+                if levels and re.sub(r"\.\d+$", "", levels[-1]) == base:
+                    levels[-1] = xs
+                else:
+                    levels.append(xs)
+            flat.append(" ".join(levels))
     else:
         flat = [str(c).strip() for c in cols]
 
@@ -164,10 +179,13 @@ def normalize_columns(cols) -> List[str]:
     for col in flat:
         col = re.sub(r"\s+", " ", col).strip()
         
-        # Collapse exact duplicate half (e.g., "Launch Launch")
+        # Collapse exact repeated runs (e.g. "Launch Launch", or a header
+        # cell with rowspan=3 flattening to "Model Model Model")
         parts = col.split()
-        if len(parts) % 2 == 0 and parts[: len(parts)//2] == parts[len(parts)//2:]:
-            parts = parts[: len(parts)//2]
+        for size in range(1, len(parts)):
+            if len(parts) % size == 0 and parts[:size] * (len(parts) // size) == parts:
+                parts = parts[:size]
+                break
         
         # Remove consecutive duplicate words
         dedup = []
@@ -195,6 +213,9 @@ def standardise_column_names(df: pd.DataFrame) -> pd.DataFrame:
         cname = col.lower()
         if cname.startswith("gpu die") or cname == "code name":
             mapping[col] = "Code name"
+        elif cname.startswith("model") and "code" in cname:
+            # Combined header e.g. "Model (Codename)" / "Model (Code name)"
+            mapping[col] = "Model name"
         elif cname.startswith("model") and "name" not in cname:
             mapping[col] = "Model"
         elif cname.startswith("geforce rtx") or cname.startswith("radeon rx"):
@@ -240,7 +261,7 @@ def process_dataframe(df: pd.DataFrame, vendor: str) -> pd.DataFrame:
         df[col] = (
             df[col].astype(str)
             .str.replace(REFERENCES_AT_END, "", regex=True)
-            .str.extract(r"([A-Za-z]+\s*\d{1,2},?\s*\d{4}|\d{4})", expand=False)
+            .str.extract(r"([A-Za-z]+\s*\d{1,2},?\s*(?:19|20)\d{2}|(?:19|20)\d{2})", expand=False)
         )
         df["Launch"] = pd.to_datetime(df[col], errors="coerce")
         logger.debug(f"{vendor}: Extracted {df['Launch'].notna().sum()} launch dates")
@@ -332,17 +353,25 @@ def fetch_vendor_tables(vendor: str, url: str) -> List[pd.DataFrame]:
         html = clean_html(html)
         
         # Parse tables matching launch/release date patterns
+        #
+        # NOTE: pandas' lxml backend implements `match` via an XPath
+        # `re:test()` call and only forwards the pattern *string* - the
+        # compiled regex's re.IGNORECASE flag is silently dropped, and
+        # EXSLT's re:test() defaults to case-sensitive. So the pattern
+        # itself must spell out both cases (e.g. Wikipedia's AMD RX 9000
+        # series table headers use "Release date & price", lowercase,
+        # while older tables use "Release Date & Price").
         dfs = pd.read_html(
             StringIO(html),
-            match=re.compile(r"Launch|Release Date & Price", re.I)
+            match=re.compile(r"[Ll]aunch|[Rr]elease [Dd]ate")
         )
-        
+
         logger.info(f"{vendor}: Found {len(dfs)} tables")
-        
+
         # NVIDIA-specific: handle transposed spec tables
         if vendor == "NVIDIA":
             try:
-                for df_t in pd.read_html(StringIO(html), match=re.compile(r"Release date", re.I)):
+                for df_t in pd.read_html(StringIO(html), match=re.compile(r"[Rr]elease [Dd]ate")):
                     t = df_t.T.reset_index()
                     cols = pd.MultiIndex.from_arrays([t.iloc[0].astype(str), t.iloc[1].astype(str)])
                     tidy = pd.DataFrame(t.iloc[2:].values, columns=cols).reset_index(drop=True)

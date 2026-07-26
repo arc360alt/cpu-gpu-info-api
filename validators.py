@@ -85,26 +85,31 @@ def validate_gpu_record(record: Dict[str, Any], key: str) -> Tuple[bool, List[st
     return len(warnings) == 0, warnings
 
 
-def validate_output(data: Dict[str, Dict[str, Any]], output_path: Path) -> bool:
+def validate_output(
+    data: Dict[str, Dict[str, Any]],
+    output_path: Path,
+    min_expected: int = MIN_EXPECTED_GPUS,
+) -> bool:
     """
     Validate the final output data.
-    
+
     Args:
-        data: Complete GPU data dictionary
+        data: Complete GPU/CPU data dictionary
         output_path: Path where output will be written
-        
+        min_expected: Minimum number of records expected (sanity check)
+
     Returns:
         True if validation passes
-        
+
     Raises:
         ValidationError: If validation fails
     """
     logger.info(f"Validating output data ({len(data)} records)...")
-    
+
     # Check minimum record count
-    if len(data) < MIN_EXPECTED_GPUS:
+    if len(data) < min_expected:
         raise ValidationError(
-            f"Output has {len(data)} GPUs but expected at least {MIN_EXPECTED_GPUS}. "
+            f"Output has {len(data)} records but expected at least {min_expected}. "
             "Wiki structure may have changed."
         )
     

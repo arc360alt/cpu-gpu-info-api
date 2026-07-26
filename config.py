@@ -4,7 +4,7 @@ Configuration module for GPU Info API.
 Contains all configuration settings, vendor URLs, and constants.
 """
 import os
-from typing import Dict
+from typing import Dict, List
 
 # ---------------------------------------------
 #  Vendor Configuration
@@ -21,6 +21,41 @@ VENDOR_CONFIGS: Dict[str, Dict[str, str]] = {
         "url": "https://en.wikipedia.org/wiki/Intel_Xe",
     },
 }
+
+# ---------------------------------------------
+#  CPU Vendor Configuration
+# ---------------------------------------------
+
+# NOTE: "List of AMD processors" is a prose/history overview page with no
+# real spec tables, unlike "List of Intel processors" which has them all in
+# one place. AMD's actual per-model spec tables live on separate per-family
+# pages, so AMD needs multiple URLs where Intel only needs one.
+CPU_VENDOR_CONFIGS: Dict[str, Dict[str, List[str]]] = {
+    "AMD": {
+        "urls": [
+            "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors",
+            "https://en.wikipedia.org/wiki/List_of_AMD_FX_processors",
+            "https://en.wikipedia.org/wiki/List_of_AMD_Athlon_processors",
+            "https://en.wikipedia.org/wiki/List_of_AMD_Turion_processors",
+            "https://en.wikipedia.org/wiki/List_of_AMD_Opteron_processors",
+            "https://en.wikipedia.org/wiki/List_of_AMD_mobile_processors",
+            "https://en.wikipedia.org/wiki/List_of_AMD_Phenom_processors",
+            "https://en.wikipedia.org/wiki/List_of_AMD_Sempron_processors",
+            "https://en.wikipedia.org/wiki/List_of_AMD_accelerated_processing_unit_microprocessors",
+        ],
+    },
+    "Intel": {
+        "urls": [
+            "https://en.wikipedia.org/wiki/List_of_Intel_processors",
+        ],
+    },
+}
+
+# Default output file path for CPU data
+DEFAULT_CPU_OUTPUT_FILE = "cpu.json"
+
+# Minimum expected CPUs in output (sanity check)
+MIN_EXPECTED_CPUS = 100
 
 # ---------------------------------------------
 #  Regex Patterns
