@@ -291,6 +291,37 @@ def main(output_file: str = DEFAULT_CPU_OUTPUT_FILE, dry_run: bool = False) -> D
 
     df = remove_bracketed_references(df, ["Model", "Code name", "Codename"])
 
+    # Some source tables include blank divider/section-break rows (e.g.
+    # separating model families) that carry no spec data at all - not even
+    # a part number. There's nothing to name these with, so drop them
+    # rather than emit placeholder "UnknownModel" records.
+    if "Model" in df.columns:
+        before = len(df)
+        df["Model"] = df["Model"].replace(r"^\s*$", pd.NA, regex=True)
+        df = df.dropna(subset=["Model"])
+        dropped = before - len(df)
+        if dropped:
+            logger.info(f"Dropped {dropped} row(s) with no Model/name value")
+    else:
+        logger.warning("No 'Model' column present after combining tables; dropping all rows")
+        df = df.iloc[0:0]
+
+    # Some source rows resolve to a "Model" but have every other spec field
+    # blank - table-parsing artifacts (a stray footnote row, a roadmap
+    # placeholder like "Q1 2026", a template leftover like "-N/a"). A record
+    # with no actual specs isn't a usable CPU entry, so drop it.
+    spec_cols = [
+        c for c in df.columns
+        if c not in ("Vendor", "Model", "Launch")
+        and not re.search(r"processor family|processor branding|^branding$", c, re.I)
+    ]
+    if spec_cols:
+        before = len(df)
+        df = df[df[spec_cols].notna().any(axis=1)]
+        dropped = before - len(df)
+        if dropped:
+            logger.info(f"Dropped {dropped} row(s) with a Model but no spec data")
+
     logger.info("Converting to JSON format...")
     result: Dict[str, Dict[str, str]] = {}
 

@@ -4683,10 +4683,6 @@
     "Clock (GHz) 3+ active cores</span>\"}]]}'>Base": 3.6,
     "Clock (GHz) 1-2 active cores</span>\"}]]}'>Boost": 5.1
   },
-  "AMD_32_MB_1_CCD_1_I_OD": {
-    "Model": "32 MB 1 × CCD 1 × I/OD",
-    "Vendor": "AMD"
-  },
   "AMD_Ryzen_9_9955HX3D": {
     "Cores (threads)": "16 (32)",
     "L3 cache (total)": "128 MB",
@@ -7750,14 +7746,6 @@
     "CPU Clock (GHz)": 2.2,
     "CPU Cache L2 (MB)": 2.0,
     "DDR3 Memory support": "1600 (Single channel only)"
-  },
-  "AMD__N_a": {
-    "Model": "-N/a",
-    "Vendor": "AMD"
-  },
-  "AMD__N_a_2": {
-    "Model": "-N/a",
-    "Vendor": "AMD"
   },
   "AMD_Athlon_X2_450": {
     "TDP": "65 W",
@@ -20291,9 +20279,6 @@
     "Released low power": "June 2014",
     "Part number low power": "AM705BECH23JA"
   },
-  "AMD_UnknownModel": {
-    "Vendor": "AMD"
-  },
   "AMD_A8_7100": {
     "Model": "A8-7100",
     "Vendor": "AMD",
@@ -20572,9 +20557,6 @@
     "Socket standard power and low power (configurable TDP)": "FP4",
     "Released standard power and low power (configurable TDP)": "June 2015",
     "Part number standard power and low power (configurable TDP)": "AM850BAAY23KA"
-  },
-  "AMD_UnknownModel_2": {
-    "Vendor": "AMD"
   },
   "AMD_A8_8600P": {
     "Model": "A8-8600P",
@@ -24194,9 +24176,6 @@
     "Clock speed": "3.0 GHz",
     "Hyper Transport": "2.0 GHz",
     "Turbo speed": "3.4 GHz"
-  },
-  "AMD_UnknownModel_3": {
-    "Vendor": "AMD"
   },
   "AMD_Phenom_II_X4_960T": {
     "TDP": "125 W",
@@ -31438,15 +31417,6 @@
     "CPU Turbo (GHz)": 2.4,
     "GPU GFLOPS": 128.0
   },
-  "AMD_UnknownModel_4": {
-    "Vendor": "AMD",
-    "CPU Cores (threads)": "2 (2)",
-    "Fab": "32 nm",
-    "CPU Cache L1": "64 KB inst. 64 KB data per core",
-    "CPU Cache L3": "-N/a",
-    "Step.": "B0",
-    "DDR3 Memory support": 1333.0
-  },
   "AMD_A4_3300M_2": {
     "Model": "A4-3300M",
     "Vendor": "AMD",
@@ -31566,14 +31536,6 @@
     "CPU Turbo (GHz)": 2.6,
     "GPU GFLOPS": 189.7
   },
-  "AMD_UnknownModel_5": {
-    "Vendor": "AMD",
-    "Fab": "32 nm",
-    "CPU Cache L1": "64 KB inst. 64 KB data per core",
-    "CPU Cache L3": "-N/a",
-    "Step.": "B0",
-    "DDR3 Memory support": 1333.0
-  },
   "AMD_A6_3400M_2": {
     "Model": "A6-3400M",
     "Vendor": "AMD",
@@ -31653,15 +31615,6 @@
     "DDR3 Memory support": 1600.0,
     "CPU Turbo (GHz)": 2.4,
     "GPU GFLOPS": 256.0
-  },
-  "AMD_UnknownModel_6": {
-    "Vendor": "AMD",
-    "CPU Cores (threads)": "4 (4)",
-    "Fab": "32 nm",
-    "CPU Cache L1": "64 KB inst. 64 KB data per core",
-    "CPU Cache L2": "4× 1MB",
-    "CPU Cache L3": "-N/a",
-    "Step.": "B0"
   },
   "AMD_A8_3500M_2": {
     "Model": "A8-3500M",
@@ -31889,13 +31842,6 @@
     "GPU GFLOPS": 381.6,
     "GPU Turbo (MHz)": 686.0
   },
-  "AMD_UnknownModel_7": {
-    "Vendor": "AMD",
-    "Fab": "32 nm",
-    "CPU Cache L1": "64 KB inst. per module 16 KB data per core",
-    "Step.": "TN-A1",
-    "TDP (W)": 35
-  },
   "AMD_A4_4300M_2": {
     "Model": "A4-4300M",
     "Vendor": "AMD",
@@ -32063,12 +32009,6 @@
     "CPU Turbo (GHz)": 2.9,
     "GPU GFLOPS": 409.3,
     "GPU Turbo (MHz)": 626.0
-  },
-  "AMD_UnknownModel_8": {
-    "Vendor": "AMD",
-    "Fab": "32 nm",
-    "CPU Cache L1": "64 KB inst. per module 16 KB data per core",
-    "Step.": "RL-A1"
   },
   "AMD_A4_5150M_2": {
     "Model": "A4-5150M",
@@ -32255,12 +32195,6 @@
     "GPU GFLOPS": 204.6,
     "GPU Turbo (MHz)": "-N/a"
   },
-  "AMD_UnknownModel_9": {
-    "Vendor": "AMD",
-    "Fab": "28 nm",
-    "CPU Cache L1": "96 KB inst. per module 16 KB data per core",
-    "Released": "June 2014"
-  },
   "AMD_A8_7100_2": {
     "Model": "A8-7100",
     "Vendor": "AMD",
@@ -32355,14 +32289,6 @@
     "CPU Turbo (GHz)": 3.3,
     "GPU GFLOPS": 382.4,
     "GPU Turbo (MHz)": "553"
-  },
-  "AMD_UnknownModel_10": {
-    "Vendor": "AMD",
-    "Fab": "28 nm",
-    "CPU Cache L1": "96 KB inst. per module 16 KB data per core",
-    "Released": "June 2014",
-    "CPU Cache L2 (MB)": "2× 2 MB",
-    "CPU [Modules/FPUs] Cores/threads": "[2]4"
   },
   "AMD_A8_7200P_2": {
     "Model": "A8-7200P",
@@ -32474,12 +32400,6 @@
     "CPU Turbo (GHz)": 3.2,
     "GPU GFLOPS": 409.6,
     "DDR Memory support": "4)1866"
-  },
-  "AMD_UnknownModel_11": {
-    "Vendor": "AMD",
-    "Fab": "28 nm",
-    "CPU Cache L1": "96 KB inst. per module 32 KB data per core",
-    "TDP (W)": "12- 35"
   },
   "AMD_A8_8600P_2": {
     "Model": "A8-8600P",
@@ -32658,11 +32578,6 @@
     "CPU Turbo (GHz)": 3.2,
     "GPU GFLOPS": 409.6
   },
-  "AMD_UnknownModel_12": {
-    "Vendor": "AMD",
-    "Fab": "28 nm",
-    "CPU Cache L1": "96 KB inst. per module 32 KB data per core"
-  },
   "AMD_Pro_A8_9600B": {
     "Model": "Pro A8-9600B",
     "Vendor": "AMD",
@@ -32819,13 +32734,6 @@
     "DDR4 Memory support": 2400.0,
     "CPU Turbo (GHz)": 3.5,
     "GPU GFLOPS": 691.2
-  },
-  "AMD_UnknownModel_13": {
-    "Vendor": "AMD",
-    "Fab": "28 nm",
-    "CPU Cache L1": "96 KB inst. per module 32 KB data per core",
-    "CPU Cache L2 (MB)": "2× 1 MB",
-    "CPU [Modules/FPUs] Cores/threads": "[2]4"
   },
   "AMD_Pro_A12_9800B": {
     "Model": "Pro A12-9800B",
@@ -34046,19 +33954,6 @@
     "GPU GFLOPS": 44.1,
     "GPU Turbo (MHz)": "-N/a"
   },
-  "AMD_UnknownModel_14": {
-    "Vendor": "AMD",
-    "GPU Model": "HD 6250",
-    "GPU Config": "80:8:4",
-    "GPU Clock (MHz)": 276.0,
-    "Fab": "40 nm",
-    "CPU Cache L1": "32KB inst. 32KB data per core",
-    "Step.": "B0",
-    "DDR3 Memory support": 1066.0,
-    "CPU Turbo (GHz)": "-N/a",
-    "GPU GFLOPS": 44.1,
-    "GPU Turbo (MHz)": "-N/a"
-  },
   "AMD_C_30_2": {
     "Model": "C-30",
     "Vendor": "AMD",
@@ -34118,12 +34013,6 @@
     "CPU Turbo (GHz)": "1.33",
     "GPU GFLOPS": 44.1,
     "GPU Turbo (MHz)": "400"
-  },
-  "AMD_UnknownModel_15": {
-    "Vendor": "AMD",
-    "GPU Config": "80:8:4",
-    "Fab": "40 nm",
-    "CPU Cache L1": "32KB inst. 32KB data per core"
   },
   "AMD_E_240_2": {
     "Model": "E-240",
@@ -34225,15 +34114,6 @@
     "CPU Turbo (GHz)": "1.33",
     "GPU GFLOPS": 44.1,
     "GPU Turbo (MHz)": "400"
-  },
-  "AMD_UnknownModel_16": {
-    "Vendor": "AMD",
-    "CPU Cores (threads)": "2 (2)",
-    "GPU Config": "80:8:4",
-    "Fab": "40 nm",
-    "CPU Cache L1": "32 KB inst. 32 KB data per core",
-    "CPU Cache L2": "2× 512KB",
-    "CPU Cache L3": "-N/a"
   },
   "AMD_E1_1200_2": {
     "Model": "E1-1200",
@@ -35167,15 +35047,6 @@
     "CPU Turbo (GHz)": 3.5,
     "GPU GFLOPS": 325.2
   },
-  "AMD_UnknownModel_17": {
-    "Vendor": "AMD",
-    "GPU Model": "R5",
-    "GPU Config": "192:12:8 3 CU",
-    "Fab": "28 nm",
-    "CPU Cache L1": "96 KB inst. per module 32 KB data per core",
-    "CPU Cache L2 (MB)": 1,
-    "CPU [Modules/FPUs] Cores/threads": "[1]2"
-  },
   "AMD_Pro_A4_4350B": {
     "Model": "Pro A4-4350B",
     "Vendor": "AMD",
@@ -35575,11 +35446,6 @@
     "Part number": "GET48LGBB22GTE GET48LGBB22GVE",
     "CPU Clock (GHz)": "1.4",
     "DDR3 Memory support": "1066"
-  },
-  "AMD_UnknownModel_18": {
-    "Vendor": "AMD",
-    "Fab": "40 nm",
-    "CPU Cache L1": "32 KB inst. 32 KB data per core"
   },
   "AMD_G_Series_T16R": {
     "Model": "G-Series T16R",
@@ -39383,9 +39249,6 @@
     "Smart Cache": "8 MB",
     "Memory capacity": "16 GB"
   },
-  "Intel_UnknownModel": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_9_270H": {
     "Model": "Core 9 270H",
     "Vendor": "Intel",
@@ -39633,9 +39496,6 @@
     "Graphics Clock (GHz)": 1.6,
     "Clock rate (GHz) Max.": 5.4
   },
-  "Intel_UnknownModel_2": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_3_201E": {
     "Cores (threads)": "4 (8)",
     "Clock rate (GHz) Base": 3.6,
@@ -39830,11 +39690,6 @@
     "Graphics EUs": 32.0,
     "Graphics Clock (GHz)": 1.65,
     "Clock rate (GHz) Max.": 5.9
-  },
-  "Intel_Q1_2026": {
-    "Model": "Q1 2026",
-    "Vendor": "Intel",
-    "Processor Family": "Q1 2026"
   },
   "Intel_Core_Ultra_9_185H": {
     "Model": "Core Ultra 9 185H",
@@ -40235,9 +40090,6 @@
     "Graphics Clock (GHz)": 1.0,
     "Power Down": "Unknown"
   },
-  "Intel_UnknownModel_3": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_Ultra_7_165HL": {
     "Model": "Core Ultra 7 165HL",
     "Vendor": "Intel",
@@ -40325,9 +40177,6 @@
     "Cores (Threads) E": "8 (8)",
     "Cores (Threads) LP-E": "2 (2)",
     "Cores (Threads) Total": "14 (20)"
-  },
-  "Intel_UnknownModel_4": {
-    "Vendor": "Intel"
   },
   "Intel_Core_Ultra_7_165UL": {
     "Model": "Core Ultra 7 165UL",
@@ -40438,9 +40287,6 @@
     "Cores (Threads) E": "4 (4)",
     "Cores (Threads) LP-E": "2 (2)",
     "Cores (Threads) Total": "8 (10)"
-  },
-  "Intel_UnknownModel_5": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i9_14900KS": {
     "Model": "Core i9 14900KS",
@@ -41381,9 +41227,6 @@
     "TDP (W) Base": 125.0,
     "TDP (W) Turbo": 181.0
   },
-  "Intel_UnknownModel_6": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i5_13600": {
     "Model": "Core i5 13600",
     "Vendor": "Intel",
@@ -41751,9 +41594,6 @@
     "UHD graphics EUs": 16.0,
     "UHD graphics Boost Clock (GHz)": 1.55
   },
-  "Intel_UnknownModel_7": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i5_13600HX": {
     "Model": "Core i5 13600HX",
     "Vendor": "Intel",
@@ -41810,9 +41650,6 @@
     "UHD graphics EUs": 16.0,
     "UHD graphics Boost Clock (GHz)": 1.45,
     "Cores (Threads) Threads": "16"
-  },
-  "Intel_UnknownModel_8": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i9_13900HK": {
     "Model": "Core i9 13900HK",
@@ -41974,9 +41811,6 @@
     "Graphics Boost Clock (GHz)": 1.4,
     "Graphics Branding": "Intel UHD Graphics"
   },
-  "Intel_UnknownModel_9": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i9_13905H": {
     "Model": "Core i9 13905H",
     "Vendor": "Intel",
@@ -42033,9 +41867,6 @@
     "Clock Rate (GHz) Turbo Clock E": 3.5,
     "Intel Iris Xe graphics EUs": 80.0,
     "Intel Iris Xe graphics Boost Clock (GHz)": 1.45
-  },
-  "Intel_UnknownModel_10": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i7_1370P": {
     "Model": "Core i7 1370P",
@@ -42112,9 +41943,6 @@
     "Clock Rate (GHz) Turbo Clock E": 3.4,
     "Intel Iris Xe graphics EUs": 80.0,
     "Intel Iris Xe graphics Turbo": 1.45
-  },
-  "Intel_UnknownModel_11": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i7_1365U": {
     "Model": "Core i7 1365U",
@@ -42267,9 +42095,6 @@
     "Intel Graphics EUs": 3.3,
     "Intel Graphics Boost Clock (GHz)": 48.0,
     "Intel Graphics Branding": "Intel UHD Graphics"
-  },
-  "Intel_UnknownModel_12": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i9_12900KS": {
     "Model": "Core i9 12900KS",
@@ -43085,9 +42910,6 @@
     "TDP (W) Turbo": "157 W",
     "Integrated graphics Max Clock": 16.0
   },
-  "Intel_UnknownModel_13": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i9_12900HK": {
     "Model": "Core i9 12900HK",
     "Vendor": "Intel",
@@ -43248,9 +43070,6 @@
     "TDP (W) Turbo": "95 W",
     "Integrated graphics Max Clock": 1.2
   },
-  "Intel_UnknownModel_14": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i7_1280P": {
     "Model": "Core i7 1280P",
     "Vendor": "Intel",
@@ -43370,9 +43189,6 @@
     "TDP (W) Base": "28 W",
     "TDP (W) Turbo": "64 W",
     "Integrated graphics Max Clock": 1.1
-  },
-  "Intel_UnknownModel_15": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i7_1265U": {
     "Model": "Core i7 1265U",
@@ -43514,9 +43330,6 @@
     "TDP (W) Turbo": "55 W",
     "Integrated graphics Max Clock": 0.9
   },
-  "Intel_UnknownModel_16": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i7_1260U": {
     "Model": "Core i7 1260U",
     "Vendor": "Intel",
@@ -43657,9 +43470,6 @@
     "TDP (W) Turbo": "28 W",
     "Integrated graphics Max Clock": 0.7
   },
-  "Intel_UnknownModel_17": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i3_N305": {
     "Clock rate (GHz) Base": 1.8,
     "Model": "Core i3 N305",
@@ -43758,9 +43568,6 @@
     "Cores (Threads)": "2 (2)",
     "TDP (W) Down": "Unknown"
   },
-  "Intel_UnknownModel_18": {
-    "Vendor": "Intel"
-  },
   "Intel_Atom_x7425E": {
     "Clock rate (GHz) Base": 1.5,
     "Model": "Atom x7425E",
@@ -43799,9 +43606,6 @@
     "TDP (W) Base": "6 W",
     "Integrated graphics Max Clock": 1.0,
     "Cores (Threads)": "2 (2)"
-  },
-  "Intel_UnknownModel_19": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i9_11900K": {
     "Cores (threads)": "8 (16)",
@@ -44181,9 +43985,6 @@
     "TDP Min": "35 W",
     "TDP Max": "45 W"
   },
-  "Intel_UnknownModel_20": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i9_11980HK": {
     "Cores (threads)": "8 (16)",
     "Model": "Core i9 11980HK",
@@ -44346,9 +44147,6 @@
     "TDP Min": "35 W",
     "TDP Max": "45 W"
   },
-  "Intel_UnknownModel_21": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i7_11390H": {
     "Cores (threads)": "4 (8)",
     "Model": "Core i7 11390H",
@@ -44438,9 +44236,6 @@
     "Clock rate (GHz) Turbo Max": 4.4,
     "TDP Min": "28 W",
     "TDP Max": "35 W"
-  },
-  "Intel_UnknownModel_22": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i7_1195G7": {
     "Cores (threads)": "4 (8)",
@@ -44544,9 +44339,6 @@
     "TDP Min": "12 W",
     "TDP Max": "28 W"
   },
-  "Intel_UnknownModel_23": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i3_1125G4": {
     "Cores (threads)": "4 (8)",
     "Model": "Core i3 1125G4",
@@ -44618,9 +44410,6 @@
     "Clock rate (GHz) Turbo Max": "-N/a",
     "TDP Min": "15 W",
     "TDP Max": "15 W"
-  },
-  "Intel_UnknownModel_24": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i7_1180G7": {
     "Cores (threads)": "4 (8)",
@@ -44729,12 +44518,6 @@
     "Clock rate (GHz) Turbo Max": 3.9,
     "TDP Min": "7 W",
     "TDP Max": "15 W"
-  },
-  "Intel_UnknownModel_25": {
-    "Vendor": "Intel"
-  },
-  "Intel_UnknownModel_26": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i9_10900K": {
     "Model": "Core i9 10900K",
@@ -47245,9 +47028,6 @@
     "Clock rate (GHz) base": 1.1,
     "Clock rate (GHz) max turbo": "3.40"
   },
-  "Intel_UnknownModel_27": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i9_7980XE": {
     "Clock rate (GHz) Base": 2.6,
     "TDP": "165 W",
@@ -48559,9 +48339,6 @@
     "IGP Clock rate (MHz) Max. dynamic": 900,
     "Code­name": "Kaby Lake"
   },
-  "Intel_UnknownModel_28": {
-    "Vendor": "Intel"
-  },
   "Intel_Core_i7_6700K": {
     "Cores (threads)": "4 (8)",
     "Clock rate (GHz) Base": 4.0,
@@ -49173,9 +48950,6 @@
     "GPU EUs": 12.0,
     "GPU Max freq. (GHz)": 0.95,
     "Cache L4 (eDRAM)": "-N/a"
-  },
-  "Intel_UnknownModel_29": {
-    "Vendor": "Intel"
   },
   "Intel_Core_i7_6970HQ": {
     "Cores (threads)": "4 (8)",
